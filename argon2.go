@@ -10,7 +10,7 @@ var ErrMismatchedHashAndPassword = errors.New("hashedPassword is not the hash of
 
 // NewArgon2Hasher returns a hasher that uses the argon2id hashing algorithm.
 // It is compatible with the `authboss.Hasher` interface
-func NewArgon2Hasher(params *argon2id.Params) *argon2Hasher {
+func New(params *argon2id.Params) *argon2Hasher {
 	if params == nil {
 		params = argon2id.DefaultParams
 	}
